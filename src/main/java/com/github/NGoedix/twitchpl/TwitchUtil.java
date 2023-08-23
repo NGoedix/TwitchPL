@@ -40,7 +40,7 @@ public class TwitchUtil {
 
     private static String buildUrlParameters(String signature, String value) {
         value = URLEncoder.encode(value, StandardCharsets.UTF_8);
-        return String.format("%%3Fallow_source=true&acmb=e30%%3D&allow_audio_only=true&fast_bread=true&playlist_include_framerate=true&reassignments_supported=true&player_backend=mediaplayer&supported_codecs=vp09,avc1&p=1234567890&play_session_id=1b0c77f72af01d4db1f993803dacd90f&cdm=wm&player_version=1.18.0&player_type=embed&sig=%s&token=%s", signature, value);
+        return String.format("?acmb=e30%%3D&allow_source=true&fast_bread=true&p=7370379&play_session_id=21efcd962e7b3fbc891bac088214aa63&player_backend=mediaplayer&playlist_include_framerate=true&reassignments_supported=true&sig=%s&supported_codecs=avc1&token=%s&transcode_mode=cbr_v1&cdm=wv&player_version=1.21.0", signature, value);
     }
 
     private static String performGetRequest(String apiUrl) throws IOException, StreamNotFound {
